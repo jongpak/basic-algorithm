@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class InsertionSort {
     public static void main(String[] args) {
-        int v[] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+        int v[] = { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
 
         System.out.println(Arrays.toString(v));
 
@@ -14,13 +14,13 @@ public class InsertionSort {
     }
 
     public static void insertionSort(int[] v) {
-        for(int i = 1; i < v.length; i++) {
-            if(v[i - 1] < v[i]) {
+        for (int i = 1; i < v.length; i++) {
+            if (v[i - 1] < v[i]) {
                 continue;
             }
 
-            for(int j = i; j > 0; j--) {
-                if(v[j - 1] < v[j]) {
+            for (int j = i; j > 0; j--) {
+                if (v[j - 1] < v[j]) {
                     break;
                 }
 
@@ -41,24 +41,24 @@ public class InsertionSort {
     public static void printProceeding(int[] v, int a, int b) {
         System.out.print("  [");
 
-        for(int i = 0; i < v.length; i++) {
-            if(i == a) {
+        for (int i = 0; i < v.length; i++) {
+            if (i == a) {
                 System.out.print("<");
             }
-            if(i == b) {
+            if (i == b) {
                 System.out.print("(");
             }
 
             System.out.print(v[i]);
 
-            if(i == b) {
+            if (i == b) {
                 System.out.print(")");
             }
-            if(i == a) {
+            if (i == a) {
                 System.out.print(">");
             }
 
-            if(i < v.length - 1) {
+            if (i < v.length - 1) {
                 System.out.print(", ");
             }
         }

@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class QuickSort {
     public static void main(String[] args) {
-        int v[] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+        int v[] = { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
 
         System.out.println(Arrays.toString(v));
 
@@ -26,26 +26,26 @@ public class QuickSort {
 
         printProceeding(v, start, mid, end);
 
-        while(left <= right) {
-            while(v[left] < pivot) {
+        while (left <= right) {
+            while (v[left] < pivot) {
                 left++;
             }
 
-            while(v[right] > pivot) {
+            while (v[right] > pivot) {
                 right--;
             }
 
-            if(left <= right) {
+            if (left <= right) {
                 swap(v, left, right);
                 left++;
                 right--;
             }
         }
 
-        if(start < right) {
+        if (start < right) {
             partition(v, start, right);
         }
-        if(left < end) {
+        if (left < end) {
             partition(v, left, end);
         }
     }
@@ -59,22 +59,22 @@ public class QuickSort {
     public static void printProceeding(int[] v, int a, int b, int c) {
         System.out.print("  ");
 
-        for(int i = 0; i < v.length; i++) {
-            if(i == a) {
+        for (int i = 0; i < v.length; i++) {
+            if (i == a) {
                 System.out.print("[");
             }
 
-            if(i == b) {
+            if (i == b) {
                 System.out.print("<");
             }
 
             System.out.print(" " + v[i] + " ");
 
-            if(i == b) {
+            if (i == b) {
                 System.out.print(">");
             }
 
-            if(i == c) {
+            if (i == c) {
                 System.out.print("]");
             }
         }
